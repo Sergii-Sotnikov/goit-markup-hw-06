@@ -65,20 +65,18 @@ p {
 
 
 .header-page {
-  border-bottom: 1px solid #E7E9FC;
-  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+    border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+    background: #FFFFFF;
 }
 
 .header-page .container {
-  display: flex;
 }
-
 
 .header-nav {
   display: flex;
   align-items: center;
+
 }
 
 
@@ -91,7 +89,6 @@ p {
   line-height: 1.17;
   text-transform: uppercase;
   align-items: center;
-  margin-right: 76px;
 }
 
 
@@ -100,6 +97,8 @@ p {
 }
 
 .header-menu-btn {
+  margin-right: 0;
+  margin-left: auto;
   width: 24px;
   height: 24px;
   border: none;
@@ -108,8 +107,6 @@ p {
   justify-content: center;
   background-color: #FFFFFF;
   cursor: pointer;
-  margin-right: 0;
-  margin-left: auto;
 }
 
 
