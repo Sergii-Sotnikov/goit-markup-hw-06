@@ -68,15 +68,16 @@ p {
     border-bottom: 1px solid #E7E9FC;
     box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
     background: #FFFFFF;
+    height: 56px;
 }
 
-.header-page .container {
+.header-container {
 }
 
 .header-nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-
 }
 
 
@@ -89,6 +90,8 @@ p {
   line-height: 1.17;
   text-transform: uppercase;
   align-items: center;
+  padding-top: 17.5px;
+  padding-bottom: 17.5px;
 }
 
 
@@ -97,8 +100,6 @@ p {
 }
 
 .header-menu-btn {
-  margin-right: 0;
-  margin-left: auto;
   width: 24px;
   height: 24px;
   border: none;
@@ -145,17 +146,6 @@ p {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -482,8 +472,8 @@ p {
 
 /*------------------ PORTFOLIO ------------------*/
 .portfolio {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .portfolio .container {
@@ -491,26 +481,26 @@ p {
 }
 
 .portfolio-title {
-  margin-bottom: 72px;
-  text-align: center;
   font-size: 36px;
   font-weight: 700;
-  line-height: 1.11;
+   line-height: 1.11;
   letter-spacing: 0.02em;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+  margin-bottom: 72px;
   color: #2E2F42;
 }
 
 .portfolio-list {
   display: flex;
-  flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
+  flex-direction: column;
+  gap: 48px;
+
 }
 
 
 .portfolio-item {
-  width: calc((100% - 48px) / 3);
 transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
@@ -520,18 +510,18 @@ overflow: hidden;
 }
 
 .thumb-text {
-      position: absolute;
-      top: 0;
-      font-size: 16px;
-      line-height: 1.5;
-      letter-spacing: 0.02em;
-      color: #F4F4FD;
-          padding: 40px 32px;
-          background-color: #4d5ae5;
-          height: 100%;
-          width: 100%;
-          transform: translateY(100%);
-          transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #F4F4FD;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  height: 100%;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -572,13 +562,17 @@ overflow: hidden;
 
 /*------------------FOOTER------------------*/
 .footer {
-  padding: 100px 0;
+  padding-top: 96px;
+  padding-bottom: 96px;
   background-color: #2e2f42;
 }
 
 .container {}
 
-.footer .header-and-footer-logo {
+.footer-box {
+}
+
+.footer-logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -586,8 +580,9 @@ overflow: hidden;
   letter-spacing: 0.03em;
   line-height: 1.17;
   text-transform: uppercase;
-  display: inline-block;
+  display: block;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer-logo-second {
@@ -595,34 +590,38 @@ overflow: hidden;
 }
 
 .footer-text {
-  max-width: 264px;
+/* Body */
   color: #F4F4FD;
+  font-family: Roboto;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  text-align: left;
 }
 
-.footer-box {
+/* .footer-box {
   display: flex;
   align-items: baseline;
-
-}
+} */
 
 .footer-container-inform {
-  margin-right: 120px;
 }
 
 .footer-container-soc {
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .footer-container-soc-title,
 .footer-container-subscribe-title {
   margin-bottom: 16px;
+  margin-top: 72px;
   color: #FFFFFF;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 
 .footer-container-soc-list {
@@ -651,7 +650,6 @@ overflow: hidden;
 
 
 .footer-container-subscribe {
-  margin-left: auto;
 }
 
 .footer-label {
@@ -670,7 +668,9 @@ overflow: hidden;
 
 .footer-subscribe {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
 }
 
 .footer-user-emai {
@@ -678,7 +678,7 @@ overflow: hidden;
 
 .footer-form-input {
   color: #FFFFFF;
-  width: 264px;
+  width: 288px;
   height: 40px;
   border: 1px solid #FFFFFF;
   border-radius: 4px;
@@ -706,7 +706,7 @@ overflow: hidden;
 .footer-subscribe-btn {
   color: #FFFFFF;
   background-color: #4D5AE5;
-  min-width: 165px;
+  width: 165px;
   height: 40px;
   border-radius: 4px;
   border: none;
@@ -714,8 +714,6 @@ overflow: hidden;
   font-weight: 500;
   letter-spacing: 0.04em;
   line-height: 1.5;
-
-  margin-top: auto;
   cursor: pointer;
   display: flex;
   justify-content: center;
