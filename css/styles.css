@@ -215,46 +215,36 @@ padding: 0;
 }
 
 /*------------------ Mobile menu ------------------*/
-.mobile-menu-container {
- padding-left: 16px;
- padding-right: 16px;
-}
-
 .mobile-menu {
-  background-color: #FFFFFF;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 999;
+  background-color: #FFFFFF;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-is-open {
+.mobile-menu.menu-is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 
-.menu {
-  width: 320px;
-  min-height: 640px;
-  background: #31D0AA;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.mobile-menu-container {
+  position: relative;
+  padding-top: 72px;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
 }
 
 .menu-close-btn {
-  background-color:#FFFFFF;;
+  background-color:#FFFFFF;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -287,7 +277,7 @@ padding: 0;
 
 .menu-nav-list {
 margin-top: 72px;
-margin-bottom: 168px;
+margin-bottom: auto;
 display: flex;
 flex-direction: column;
 gap: 40px;
@@ -302,9 +292,9 @@ gap: 40px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .menu-current-studio {
+.menu-current-studio {
   color: #404BBF;
-} */
+}
 
 .menu-link:hover,
 .menu-link:focus {
@@ -318,6 +308,7 @@ gap: 24px;
 margin-bottom: 48px;
 }
 
+
 .menu-contact-link {
   color: #434455;
   font-size: 20px;
@@ -328,14 +319,22 @@ margin-bottom: 48px;
   color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.menu-current-address {
+  color: #404BBF;
+}
+
 .menu-contact-link:focus,
 .menu-contact-link:hover {
   color: #404BBF;
 }
 
 .menu-list-icons {
-display: flex;
-gap: 40px;
+  display: flex;
+  gap: 40px;
+}
+
+.menu-item-icons {
+  width: calc((100% - 120px) / 4);
 }
 
 .menu-soc-link {
@@ -351,10 +350,6 @@ gap: 40px;
 .menu-icon-soc {
   fill: #FFFFFF;
 }
-
-
-
-
 
 
 @media screen and (min-width: 768px) {
