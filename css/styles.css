@@ -275,9 +275,11 @@ p {
   fill: #FFFFFF;
 }
 
-.menu-nav-list {
-margin-top: 72px;
+.menu-nav {
 margin-bottom: auto;
+}
+
+.menu-nav-list {
 display: flex;
 flex-direction: column;
 gap: 40px;
@@ -301,11 +303,14 @@ gap: 40px;
   color: #404BBF;
 }
 
+.menu-address {
+margin-bottom: 48px;
+}
+
 .menu-adress-list {
 display: flex;
 flex-direction: column;
 gap: 24px;
-margin-bottom: 48px;
 }
 
 .menu-contact-link {
@@ -429,6 +434,30 @@ margin-bottom: 48px;
   margin-top: 36px;
 }
 }
+
+@media screen and (min-width: 1158px) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+      url(../images/hero/people-office.jpeg);
+    max-width: 1440px;
+    padding: 188px 0;
+  }
+  .hero-btn {
+    margin-top: 48px;
+}
+}
+
+@media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+  .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+              rgba(46, 47, 66, 0.7)),
+            url(../images/hero/people-office@2x.jpeg);
+  }
+}
+
+
+
 
 
 /*------------------ADVANTEGES ------------------*/
@@ -573,6 +602,7 @@ margin-bottom: 48px;
   background-color: #FFFFFF;
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  
 }
 
 .team-image {}
@@ -595,7 +625,7 @@ margin-bottom: 48px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .team-list-icons {
@@ -685,6 +715,10 @@ margin-bottom: 48px;
   display: flex;
   flex-direction: column;
   gap: 48px;
+}
+
+.portfolio-item {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .thumb-text {
@@ -788,6 +822,7 @@ margin-bottom: 48px;
 .footer-container-inform {
   display: flex;
   flex-direction: column;
+  margin-bottom: 72px;
 }
 
 .footer-logo {
@@ -812,7 +847,6 @@ margin-bottom: 48px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-bottom: 72px;
 }
 
 .footer-container-soc-title,
@@ -823,12 +857,11 @@ margin-bottom: 48px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  text-align: center;
+  text-align: left;
   margin-bottom: 16px;
 }
 
 .footer-container-soc {
-  margin-bottom: 72px;
 }
 
 .footer-container-soc-list {
@@ -956,13 +989,14 @@ margin-bottom: 48px;
 }
 
 .footer .container {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .footer-box {
   display: flex;
   flex-direction: row;
+  gap: 0;
   align-items: baseline;
 }
 
@@ -1244,6 +1278,9 @@ margin-bottom: 48px;
   width: 408px;
   min-height: 584px;
   top: 96px;
+  padding-left: 24px;
+  padding-right: 24px;
+
 }
 
 .modal-btn-checkbox:hover {
@@ -1265,7 +1302,6 @@ margin-bottom: 48px;
     padding-right: 24px;
     padding-bottom: 24px;
     padding-left: 24px;
-    padding-left: 16px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
